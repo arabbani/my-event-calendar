@@ -37,10 +37,10 @@ export class EventListComponent implements OnInit {
         end: event.end as Date,
         color: {
           primary: colors[currentColorIndex].color,
-          secondary: colors[currentColorIndex].backgroundColor
+          secondary: colors[currentColorIndex].color
         },
         meta: {
-          cssClass: 'bg-1'
+          cssClass: colors[currentColorIndex].cssClass
         }
       });
       currentColorIndex++;
