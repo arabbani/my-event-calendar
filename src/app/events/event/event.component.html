@@ -1,0 +1,19 @@
+<div class="card mb-2">
+    <div class="card-body">
+        <h5 class="card-title">{{ event.name }}</h5>
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">Start</div>
+                    <div class="col-12"><a class="card-link">{{ event.start | date }}</a></div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-12">End</div>
+                    <div class="col-12"><a class="card-link">{{ event.end | date }}</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
