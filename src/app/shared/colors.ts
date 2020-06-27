@@ -1,22 +1,22 @@
 export const colors = [
     {
         color: '#A66996',
-        backgroundColor: '#599669'
+        cssClass: 'bg-1'
     },
     {
         color: '#AA5C6F',
-        backgroundColor: '#55a390'
+        cssClass: 'bg-2'
     },
     {
         color: '#A37852',
-        backgroundColor: '#5c87ad'
+        cssClass: 'bg-3'
     },
     {
         color: '#614F9B',
-        backgroundColor: '#9eb064'
+        cssClass: 'bg-4'
     },
     {
         color: '#476F96',
-        backgroundColor: '#b89069'
+        cssClass: 'bg-5'
     },
 ];

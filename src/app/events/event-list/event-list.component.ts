@@ -32,7 +32,6 @@ export class EventListComponent implements OnInit {
         currentColorIndex = 0;
       }
       this.events.push({
-        id: index,
         title: event.name,
         start: event.start as Date,
         end: event.end as Date,
@@ -41,8 +40,8 @@ export class EventListComponent implements OnInit {
           secondary: colors[currentColorIndex].backgroundColor
         },
         meta: {
-          id: event.name,
-        },
+          cssClass: 'bg-1'
+        }
       });
       currentColorIndex++;
     });

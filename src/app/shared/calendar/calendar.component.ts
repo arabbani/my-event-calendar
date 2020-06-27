@@ -22,7 +22,7 @@ export class CalendarComponent implements OnInit {
   beforeMonthViewRender(renderEvent: CalendarMonthViewBeforeRenderEvent): void {
     renderEvent.body.forEach((day) => {
       const date = day.date;
-      day.backgroundColor = this.getCellBackgroundClass(date);
+      day.cssClass = this.getCellBackgroundClass(date);
     });
   }
 
@@ -31,7 +31,7 @@ export class CalendarComponent implements OnInit {
     let monthOfYear = date.getMonth();
     var event = this.events.find(event => event.start.getDate() <= dayOfMonth && event.start.getMonth() === monthOfYear && event.end.getDate() >= dayOfMonth);
     if (event) {
-      return event.color.secondary;
+      return event.meta.cssClass;
     }
     return '';
   }
