@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CalendarEvent } from 'angular-calendar';
 import { colors } from '../../shared/colors';
-import { EventService } from '../event.service';
 import { IEvent } from '../event.model';
+import { EventService } from '../event.service';
 
 
 
@@ -27,7 +27,7 @@ export class EventListComponent implements OnInit {
   private createCalendarEvents(events: IEvent[]): void {
     const numberOfColors = colors.length;
     let currentColorIndex = 0;
-    events.forEach((event, index) => {
+    events.forEach(event => {
       if (currentColorIndex >= numberOfColors) {
         currentColorIndex = 0;
       }
