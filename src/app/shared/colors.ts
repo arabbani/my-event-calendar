@@ -4,7 +4,7 @@ export const colors = [
     cssClass: 'bg-1'
   },
   {
-    color: '#5C677D',
+    color: '#457b9d',
     cssClass: 'bg-2'
   },
   {

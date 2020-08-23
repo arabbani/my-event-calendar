@@ -30,7 +30,12 @@ export class CalendarComponent implements OnInit {
   private getCellBackgroundClass(date: Date): string {
     let dayOfMonth = date.getDate();
     let monthOfYear = date.getMonth();
-    var event = this.events.find(event => event.start.getDate() <= dayOfMonth && event.start.getMonth() === monthOfYear && event.end.getDate() >= dayOfMonth);
+    let year = date.getFullYear();
+    var event = this.events.find(event => {
+      const startDate = event.start;
+      const endDate = event.end;
+      return startDate.getDate() <= dayOfMonth && startDate.getMonth() === monthOfYear && endDate.getDate() >= dayOfMonth && endDate.getMonth() === monthOfYear && startDate.getFullYear() === year && endDate.getFullYear() === year;
+    });
     if (event) {
       return event.meta.cssClass;
     }
